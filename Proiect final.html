@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+			* {box-sizing:border-box}
+
+			/* Slideshow container */
+			.slideshow-container {
+			  max-width: 1000px;
+			  position: relative;
+			  margin: auto;
+			}
+
+			/* Hide the images by default */
+			.mySlides {
+			  display: none;
+			}
+
+			/* Next & previous buttons */
+			.prev, .next {
+			  cursor: pointer;
+			  position: absolute;
+			  top: 50%;
+			  width: auto;
+			  margin-top: -22px;
+			  padding: 16px;
+			  color: white;
+			  font-weight: bold;
+			  font-size: 18px;
+			  transition: 0.6s ease;
+			  border-radius: 0 3px 3px 0;
+			  user-select: none;
+			}
+
+			/* Position the "next button" to the right */
+			.next {
+			  right: 0;
+			  border-radius: 3px 0 0 3px;
+			}
+
+			/* On hover, add a black background color with a little bit see-through */
+			.prev:hover, .next:hover {
+			  background-color: rgba(0,0,0,0.8);
+			}
+
+			/* Caption text */
+			.text {
+			  color: #f2f2f2;
+			  font-size: 15px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  bottom: 8px;
+			  width: 100%;
+			  text-align: center;
+			}
+
+			/* Number text (1/3 etc) */
+			.numbertext {
+			  color: #f2f2f2;
+			  font-size: 12px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  top: 0;
+			}
+
+			/* The dots/bullets/indicators */
+			.dot {
+			  cursor: pointer;
+			  height: 15px;
+			  width: 15px;
+			  margin: 0 2px;
+			  background-color: #bbb;
+			  border-radius: 50%;
+			  display: inline-block;
+			  transition: background-color 0.6s ease;
+			}
+
+			.active, .dot:hover {
+			  background-color: #717171;
+			}
+
+			
+			@-webkit-keyframes fade {
+			  from {opacity: .4}
+			  to {opacity: 1}
+			}
+
+			@keyframes fade {
+			  from {opacity: .4}
+			  to {opacity: 1}
+			}
+
+</style>
+
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b></b>
+			<img src="logo.png" alt="logo" style="width:100%">
+	</h3>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+  
+    
+	
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+			Shop <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Kit-uri zero waste</a>
+      <a href="#" class="w3-bar-item w3-button">Baie</a>
+      <a href="#" class="w3-bar-item w3-button">Reutilizabile</a>
+    </div>
+	
+  </div>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contacteaza-ne</a> 
+  
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">
+	<img src="logo-font-alb.png" alt="logo" style="width:100%">
+  </div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left"></p>
+    <p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  
+  <div class="w3-display-container w3-container">
+  </div>
+
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p></p>
+	
+	
+				
+				<!-- Slideshow container -->
+			<div class="slideshow-container">
+			
+			<div class="w3-display-topleft w3-text-black" style="padding:24px 48px">
+			  <h1 class="w3-jumbo w3-hide-small">Noutati</h1>
+			  <h1 class="w3-hide-large w3-hide-medium">Noutati</h1>
+			  <h1 class="w3-hide-small">Produse esentiale pentru o viata zero-waste</h1>
+			  <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">CUMPARA</a></p>
+			</div>
+ 
+			  <!-- Full-width images with number and caption text -->
+			  <div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+				<img src="ata-dentara.jpg" style="width:100%">
+				
+			  </div>
+
+			  <div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<img src="balsam.jpg" style="width:100%">
+				
+			  </div>
+
+			  <div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<img src="betisoare.jpg" style="width:100%">
+				
+			  </div>
+
+			  <!-- Next and previous buttons -->
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+			<!-- The dots/circles -->
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span>
+			  <span class="dot" onclick="currentSlide(2)"></span>
+			  <span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+
+
+
+
+
+  </div>
+
+  <!-- Product grid -->
+  <div class="w3-row ">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="ata-dentara.jpg" style="width:100%">
+        <p>Ata dentara din matase naturala<br><b>20 RON</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="aparat-de-ras.jpg" style="width:100%">
+        <p>Aparat de ras<br><b>50 RON</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="balsam.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Nou</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Cumpara acum <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Balsam de buze vegan<br><b>20 RON</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="betisoare.jpg" style="width:100%">
+        <p>Betisoare de urechi din bambus si bumbac<br><b>15 RON</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="cana.jpg" style="width:100%">
+        <p>Cana reutilizabila<br><b>25 RON</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="kit-baie.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Cumpara acum <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p>Kit baie pentru incepatori<br><b class="w3-text-red">140 RON</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="palo-santo.jpg" style="width:100%">
+        <p>Lemnul sfant - Palo-santo<br><b>30 RON</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="pasta-de-dinti.jpg" style="width:100%">
+        <p>Pasta de dinti tablete<br><b>15 RON</b></p>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contacteaza-ne</h4>
+        <p>Ai intrebari? Suntem aici.</p>
+        <form action="/action_page.php" target="_blank" novalidate onsubmit="return all_good();">
+          <p><input class="w3-input w3-border" type="text" placeholder="Nume" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="mail" onkeyup="verifica_mail()" required></p>
+          <p id="text_eroare" ></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subiect" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Mesaj" name="Message" required></p>
+		  <label>
+			<input type="checkbox" name="bifa" onchange="verifica_bifa()" /> Sunt de acord ca datele mele sa fie procesate de catre Esennoua.
+		  </label>
+		        <p id="bifeaza_casuta" ></p>
+          <button type="submit" class="w3-button w3-block w3-black" onclick= "all_good()">Trimite</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>Despre noi</h4>
+        <p><a href="#">Povestea noastra</a></p>
+        <p><a href="#">Alatura-te echipei</a></p>
+        <p><a href="#">Unde ne gasesti</a></p>
+        <p><a href="#">Transport</a></p>
+        <p><a href="#">Plata</a></p>
+        <p><a href="#">Gift card</a></p>
+        <p><a href="#">Ramburs</a></p>
+        <p><a href="#">Ajutor</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Magazin</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> Esennoua Romania</p>
+        <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
+        <p><i class="fa fa-fw fa-envelope"></i> buna@esennoua.ro</p>
+        <h4>Plati prin</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Mastercard</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Visa</p>
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+  <!-- End page content -->
+</div>
+
+
+
+<script src = "https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script>
+// Accordion 
+  
+			  var slideIndex = 1;
+			showSlides(slideIndex);
+
+			// Next/previous controls
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			// Thumbnail image controls
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				  slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				  dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			}
+  
+  
+  
+  
+  
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+		var mail = document.getElementsByName('mail')[0];
+		//var send = document.getElementsByName('trimite')[0];
+		var bifa = document.getElementsByName('bifa')[0];
+				
+		function verifica_mail(){
+			if (
+				mail.value.indexOf('@') < 1 ||
+				mail.value.indexOf('@') != mail.value.lastIndexOf('@') ||
+				mail.value.indexOf(' ') != -1 ||
+				mail.value.lastIndexOf('.') > mail.value.length - 3 ||
+				mail.value.lastIndexOf('.') < mail.value.indexOf('@') + 3				
+			) {
+				document.getElementById('text_eroare').innerHTML = 'Te rugam sa introduci o adresa de mail valida.';
+				return false;
+			} else {
+				document.getElementById('text_eroare').innerHTML = '';
+				return true;
+			}
+		}
+
+		function verifica_bifa(){
+			if(bifa.checked == false){
+				document.getElementById('bifeaza_casuta').innerHTML = 'Te rugam sa aprobi procesarea datelor de catre Esennoua.';
+				return false;
+			} else {
+				document.getElementById('bifeaza_casuta').innerHTML = ' ' ;
+				// document.getElementsByTagName('p')[1].innerHTML = '';
+				return true;
+			}
+		}
+		
+		
+		function all_good(){
+			return verifica_mail() && verifica_bifa() ;
+			
+			if (verifica_mail() == true && verifica_bifa() == true){
+				return true;
+			} else {
+				return false;
+			}
+		}
+</script>
+<!-- de ce nu pot adauga? - no more call on myAccFunc()
+
+$(document).ready(function(){
+ 	
+  })
+  TO DO LIST: 
+  - Images gallery 
+  - cod extern? - mail Alin
+  -->
+</body>
+</html>
